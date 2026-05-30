@@ -11,6 +11,7 @@ Script Purpose:
 
 IF OBJECT_ID ('bronze.crm_cust_info', 'U') IS NOT NULL
     DROP TABLE bronze.crm_cust_info;
+GO
 
 CREATE TABLE bronze.crm_cust_info (
 	cst_id INT,
@@ -24,6 +25,7 @@ CREATE TABLE bronze.crm_cust_info (
 
 IF OBJECT_ID ('bronze.crm_prd_info', 'U') IS NOT NULL
     DROP TABLE bronze.crm_prd_info;
+GO
 
 CREATE TABLE bronze.crm_prd_info (
     prd_id INT,
@@ -37,6 +39,7 @@ CREATE TABLE bronze.crm_prd_info (
 
 IF OBJECT_ID ('bronze.crm_sales_details', 'U') IS NOT NULL
     DROP TABLE bronze.crm_sales_details;
+GO
 
 CREATE TABLE bronze.crm_sales_details (
     sls_ord_num  NVARCHAR(50),
@@ -52,6 +55,7 @@ CREATE TABLE bronze.crm_sales_details (
 
 IF OBJECT_ID ('bronze.erp_cust_az12', 'U') IS NOT NULL
     DROP TABLE bronze.erp_cust_az12;
+GO
 
 CREATE TABLE bronze.erp_cust_az12 (
     cid NVARCHAR(50),
@@ -59,25 +63,26 @@ CREATE TABLE bronze.erp_cust_az12 (
     gen NVARCHAR(50)
 );
 
-
 IF OBJECT_ID ('bronze.erp_LOC_A101', 'U') IS NOT NULL
     DROP TABLE bronze.erp_LOC_A101;
+GO
 
 CREATE TABLE bronze.erp_LOC_A101 (
-    CID   VARCHAR(11) NOT NULL,
-    CNTRY VARCHAR(20) NULL,
+    cid   VARCHAR(11) NOT NULL,
+    cntry VARCHAR(20) NULL,
 
     CONSTRAINT PK_LOC_A101 PRIMARY KEY (CID)
 );
 
 IF OBJECT_ID ('bronze.erp_PX_CAT_G1V2', 'U') IS NOT NULL
     DROP TABLE bronze.erp_PX_CAT_G1V2;
+GO
 
 CREATE TABLE bronze.erp_PX_CAT_G1V2 (
-    ID          VARCHAR(5)  NOT NULL,
-    CAT         VARCHAR(20) NULL,
-    SUBCAT      VARCHAR(20) NULL,
-    MAINTENANCE VARCHAR(3)  NULL,
+    id          VARCHAR(5)  NOT NULL,
+    cat         VARCHAR(20) NULL,
+    subcat      VARCHAR(20) NULL,
+    maintenance VARCHAR(3)  NULL,
 
     CONSTRAINT PK_PX_CAT_G1V2 PRIMARY KEY (ID)
 );
